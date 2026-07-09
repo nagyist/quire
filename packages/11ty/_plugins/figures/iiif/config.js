@@ -110,7 +110,7 @@ export default (eleventyConfig) => {
       {
         name: 'thumbnail',
         resize: {
-          width: 280
+          width: 320
         }
       },
       /**
@@ -129,7 +129,7 @@ export default (eleventyConfig) => {
       {
         name: 'static-inline-figure-image',
         resize: {
-          width: 626
+          width: 640
         }
       }
     ]

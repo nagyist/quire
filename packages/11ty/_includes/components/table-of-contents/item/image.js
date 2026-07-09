@@ -13,14 +13,14 @@ import { html } from '#lib/common-tags/index.js'
  */
 export default function (eleventyConfig) {
   return function (figureMedia) {
-    const { alt, derivatives, src: canonSrc } = figureMedia
+    const { alt, derivatives, src: canonicalSrc } = figureMedia
     let height, width, src
 
     switch (true) {
-      case derivatives?.thumbnail?.paths !== undefined &&
-            derivatives?.thumbnail?.dimensions !== undefined: {
-        const { thumbnail } = derivatives
-        const { dimensions, paths } = thumbnail
+      case derivatives?.staticInlineFigureImage?.paths !== undefined &&
+            derivatives?.staticInlineFigureImage?.dimensions !== undefined: {
+        const { staticInlineFigureImage } = derivatives
+        const { dimensions, paths } = staticInlineFigureImage
 
         height = dimensions.height
         width = dimensions.width
@@ -28,8 +28,8 @@ export default function (eleventyConfig) {
 
         break
       }
-      case Boolean(canonSrc):
-        src = canonSrc
+      case Boolean(canonicalSrc):
+        src = canonicalSrc
         break
 
       default:
