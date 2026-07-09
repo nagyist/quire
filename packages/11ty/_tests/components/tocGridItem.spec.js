@@ -8,12 +8,12 @@ import { JSDOM } from 'jsdom'
 import test from 'ava'
 import tocGridItemImage from '../../_includes/components/table-of-contents/item/image.js'
 
-test('Ensure Table of Contents Grid Item Image use thumbnails metadata if available', (t) => {
+test('Ensure Table of Contents Grid Item Image use staticInlineFigureImage metadata if available', (t) => {
   // Init the component with an empty config and initialized figure media data hunk
   const imageComponent = tocGridItemImage({ globalData: { config: { figures: {} } } })
   const figureMedia = {
     derivatives: {
-      thumbnail: {
+      staticInlineFigureImage: {
         paths: {
           internal: '/_assets/test.jpg',
           absolute: '/pathname/_assets/test.jpg',
@@ -39,7 +39,7 @@ test('Ensure Table of Contents Grid Item Image use thumbnails metadata if availa
   const height = Number(img.getAttribute('height'))
   const width = Number(img.getAttribute('width'))
 
-  t.is(src, figureMedia.derivatives.thumbnail.paths.internal)
-  t.is(height, figureMedia.derivatives.thumbnail.dimensions.height)
-  t.is(width, figureMedia.derivatives.thumbnail.dimensions.width)
+  t.is(src, figureMedia.derivatives.staticInlineFigureImage.paths.internal)
+  t.is(height, figureMedia.derivatives.staticInlineFigureImage.dimensions.height)
+  t.is(width, figureMedia.derivatives.staticInlineFigureImage.dimensions.width)
 })
