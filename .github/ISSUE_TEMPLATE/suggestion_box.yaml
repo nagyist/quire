@@ -1,9 +1,5 @@
 name: 🗳️ Suggestion Box
 description: Submit a proposal for a change or new feature.
-labels: [feature]
-assignees:
-- erin-cecele
-- geealbers
 body:
 - type: markdown
   attributes:
