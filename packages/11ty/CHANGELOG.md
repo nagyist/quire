@@ -16,7 +16,7 @@ Changelog entries are classified using the following labels:
 
 ### Fixed
 
-- Issue where cover and splash pages were successfully printed in PDF output.
+- Issue where cover pages were not appearing in PDF output.
 
 ## [1.0.0-rc.48]
 
