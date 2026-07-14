@@ -28,6 +28,15 @@ const logger = chalkFactory('Figures:FigureMedia', 'DEBUG')
  * @property {String} printImage Optional path to an alternate image to use in print
  */
 export default class FigureMedia {
+
+  /**
+   * @private
+   * @property #annotations
+   * @property #sequences
+   *
+   * Storage for this figure's annotation and sequence asset data
+   *
+   */
   #annotations
   #sequences
 
