@@ -12,6 +12,22 @@ Changelog entries are classified using the following labels:
 - `Fixed`: for any bug fixes
 - `Removed`: for deprecated features removed in this release
 
+## [1.0.0-rc.49]
+
+### Fixed
+
+- Issue where cover pages were not appearing in PDF output.
+
+## [1.0.0-rc.48]
+
+### Fixed
+
+- Issue #1232 where catalogue indexes intanitated by `layout: table-of-contents` + `presentation: grid` do not correctly display IIIF images.
+
+### Changed
+
+- Refactored `FigureMedia` model to stabilize creation of `annotations` and `sequences`.
+
 ## [1.0.0-rc.47]
 
 ### Changed
